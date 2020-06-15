@@ -1,0 +1,574 @@
+﻿@using Awizom.Models
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Awizom Tech Bytes Pvt. Ltd.</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="icon" href="/awi.png" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+
+    <!-- CSS
+    ================================================== -->
+    <!-- Bootstrap -->
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/css/owl.theme.css" rel="stylesheet" />
+    <link href="~/css/flexslider.css" rel="stylesheet" />
+    <link href="~/css/cd-hero.css" rel="stylesheet" />
+    <link href="~/css/presets/preset1.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+    @*<div class="style-switch-wrapper">
+            <div class="style-switch-button">
+                <i class="fa fa-sliders"></i>
+            </div>
+            <h3>Style Options</h3>
+            <button id="preset1" class="btn btn-sm btn-primary"></button>
+            <button id="preset2" class="btn btn-sm btn-primary"></button>
+            <button id="preset3" class="btn btn-sm btn-primary"></button>
+            <button id="preset4" class="btn btn-sm btn-primary"></button>
+            <button id="preset5" class="btn btn-sm btn-primary"></button>
+            <button id="preset6" class="btn btn-sm btn-primary"></button>
+            <br /><br />
+            <a class="btn btn-sm btn-primary close-styler pull-right">Close X</a>
+        </div>*@
+
+
+
+    <div class="body-inner">
+        <!-- Header start -->
+        <header id="header" class="navbar-fixed-top header" role="banner">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo start -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand navbar-bg" style="background-color: white; margin-left: 3px; margin-top: -3px;">
+                            <a href="@Url.Action("Index", "Home", new { area = "" })">
+                                <img class="img-responsive" src="/FrontDesign/images/awizomlogo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div><!--/ Logo end -->
+                    <nav class="collapse navbar-collapse clearfix" role="navigation">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="@Url.Action("Index", "Home", new { area = "" })">Home</a></li>
+
+                            <li><a href="@Url.Action("About", "Home", new { area = "" })">About Us</a></li>
+
+
+                            <li><a href="@Url.Action("Services", "Home", new { area = "" })">Services</a></li>
+
+
+                            <li><a href="@Url.Action("Projects", "Home", new { area = "" })">Projects</a></li>
+
+
+                            <li><a href="@Url.Action("Career", "Home", new { area = "" })">Career</a></li>
+
+
+                            <li class="active"><a href="@Url.Action("Contact", "Home", new { area = "" })">Contact</a></li>
+
+                            <li><a href="@Url.Action("Appointment", "Home", new { area = "" })">Make Appointment</a></li>
+
+                            <li><a href="@Url.Action("Events", "Home", new { area = "" })">Events</a></li>
+                        </ul>
+                    </nav><!--/ Navigation end -->
+                </div><!--/ Row end -->
+            </div><!--/ Container end -->
+        </header><!--/ Header end -->
+
+        <div id="banner-area">
+            <img src="/FrontDesign/images/banner/banner2.jpg" alt="" />
+            <div class="parallax-overlay"></div>
+            <!-- Subpage title start -->
+            <div class="banner-title-content">
+                <div class="text-center">
+                    <h2>Contact Us</h2>
+                    <ul class="breadcrumb">
+                        <li><a href="@Url.Action("Index", "Home", new { area = "" })" style="color:white">Home</a></li>
+                        <li><a href="#"> Contact</a></li>
+                    </ul>
+                </div>
+            </div><!-- Subpage title end -->
+        </div><!-- Banner area end -->
+        <!-- Main container start -->
+
+        <div class="map" style="margin-top:60px;border:0; height: 400px; width: 100%;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3181.9249555078322!2d81.66312451447467!3d21.211589186888467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd6300ab1b05%3A0xaf8a6ff8e14c0990!2sAwizom+Tech+Bytes+Pvt.+Ltd.!5e1!3m2!1sen!2sin!4v1551273515639" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { id = "Contact", role = "form" }))
+        {
+            <section id="main-container">
+                <div class="container">
+
+                    <div class="row" style="margin-top:-40px;">
+                        <div class="col-md-7">
+                            <form id="contact-form" action="" method="post" role="form">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label style="font-weight:bold; color:blue">Name</label>
+                                            <input class="form-control" name="name" id="name" placeholder="Name" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label style="font-weight:bold; color:blue">Email</label>
+                                            <input class="form-control" name="email" id="email"
+                                                   placeholder="Email" type="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label style="font-weight:bold; color:blue">Subject</label>
+                                            <input class="form-control" name="subject" id="subject"
+                                                   placeholder="Subject" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label style="font-weight:bold; color:blue">Message</label>
+                                    <textarea class="form-control" name="message" id="message" placeholder="Enter Your Message...." rows="10" required></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <br>
+                                    <button class="btn btn-primary solid blank" type="submit" id="ContactSubmit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="col-md-5" style="background-color:#9af7ef;margin-top:53px;">
+                            <div class="contact-info">
+                                <h3>Contact Details</h3>
+                                <div class="info_item">
+
+                                    <h6><i class="fa fa-home"></i>5th Floor, Capital Plaza</h6>
+                                    <p style="font-size:small;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Near Fruit Market Deopuri, Raipur (C.G.) 492015</p>
+                                </div>
+
+
+                                <p><i class="fa fa-phone info"></i>  0771-2412821, 2412921, 6268708414 </p>
+                                <p><i class="fa fa-envelope-o info"></i>  info@awizomtech.com</p>
+                                <!-- <p><i class="fa fa-globe info"></i>  www.bizcraft.com</p> -->
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div><!--/ container end -->
+
+            </section><!--/ Main container end -->
+
+
+        }
+        @Html.Hidden("SaveStatus", ViewBag.status as string)
+        @Html.Hidden("RedirectToHome", Url.Action("Contact", "Home", new { area = "" }))
+
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                //var tech = getUrlParameter('SaveStatus');
+                var tech = $("#SaveStatus").val();
+
+                if (tech == "Exists" || tech == "AllReadyUse") {
+                    $.alert({
+                        title: 'Sorry',
+                        content: 'Data cannot be changed because already Exists',
+                        confirmButton: 'OK',
+                        confirmButtonClass: 'btn-info',
+                        icon: 'icon-thumbs-down icon-2x ',
+                        animation: 'zoom',
+                        confirm: function () {
+                        }
+                    });
+                }
+                else
+                    if (tech == "AllReadyUse") {
+                        $.alert({
+                            title: 'Sorry',
+                            content: 'Data cannot be changed because reference already used',
+                            confirmButton: 'OK',
+                            confirmButtonClass: 'btn-info',
+                            icon: 'icon-thumbs-down icon-2x ',
+                            animation: 'zoom',
+                            confirm: function () {
+                            }
+                        });
+                    } else
+                        if (tech == "Deleted") {
+                            $.alert({
+                                title: 'Cheers',
+                                content: 'Data deleted successfully',
+                                confirmButton: 'OK',
+                                confirmButtonClass: 'btn-info',
+                                icon: 'icon-thumbs-down icon-2x ',
+                                animation: 'zoom',
+                                confirm: function () {
+                                }
+                            });
+                        }
+                        else
+                            if (tech == "swr") {
+                                $.alert({
+                                    title: 'Sorry',
+                                    content: 'Something went wrong',
+                                    confirmButton: 'OK',
+                                    confirmButtonClass: 'btn-info',
+                                    icon: 'icon-thumbs-down icon-2x ',
+                                    animation: 'zoom',
+                                    confirm: function () {
+                                    }
+                                });
+                            }
+            });
+
+        </script>
+
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+
+        <script type="text/javascript">
+            $("#Contact").validate({
+                submitHandler: function (form) {
+                }
+            });
+            $("#ContactSubmit").click(function (e) {
+                if ($("#Contact").valid()) {
+                    $('.form-process').fadeIn();
+
+                    var fn = $('#ClassName').val();
+                    var regex = /^([a-zA-Z\0-9\_])+(\s)+([a-zA-Z\0-9\_])+$/
+                    //var regex = /^(?=.*[A-Z]).{8,}/
+                    var CheckName = regex.test(fn);
+                    if (CheckName == true && $('#ClassName').val() != '' && $('#Note').val() != '') {
+                        $.alert({
+                            title: 'Sorry',
+                            content: 'Class name should not contains <b>spacial character or number.</b>',
+                            confirmButton: 'OK',
+                            confirmButtonClass: 'btn-info',
+                            icon: 'icon-thumbs-down icon-2x ',
+                            animation: 'zoom',
+                            confirm: function () {
+                            }
+                        });
+                    } else {
+                        $.ajax({
+
+                            type: "post",
+                            url: "/Home/Contact",
+
+                            data: {
+                                ContactID: $('#ContactID').val(),
+                                Name: $('#Name').val(),
+                                Email: $('#Email').val(),
+                                Subject: $('#Subject').val(),
+                                Message: $('#Message').val()
+                            },
+                            datatype: "json",
+
+                            success: function (data) {
+
+                                $('.form-process').fadeOut();
+                                if (data == "Succeeded") {
+                                    $.alert({
+                                        title: 'Cheers',
+                                        content: 'Your Data has been saved <b> SUCCESSFULLY.</b>',
+                                        confirmButton: 'OK',
+                                        confirmButtonClass: 'btn-info',
+                                        icon: 'icon-thumbs-up icon-2x ',
+                                        animation: 'zoom',
+                                        confirm: function () {
+                                            var url = $("#RedirectToHome").val();
+                                            location.href = url;
+                                        }
+                                    });
+                                }
+                                else {
+                                    $.alert({
+                                        title: 'Sorry',
+                                        content: 'Something went <b>wrong.</b>',
+                                        confirmButton: 'OK',
+                                        confirmButtonClass: 'btn-info',
+                                        icon: 'icon-thumbs-down icon-2x ',
+                                        animation: 'zoom',
+                                        confirm: function () {
+                                        }
+                                    });
+                                }
+
+                            }
+                        });
+                    }
+
+
+                }
+            });
+
+
+        </script>
+
+
+        <!-- Footer start -->
+        <footer id="footer" class="footer">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 footer-widget">
+                        <h3 class="widget-title">Recent Posts</h3>
+
+                        <div class="latest-post-items media">
+                            <div class="latest-post-content media-body">
+                                <h4><a href="#">Bulgaria claims to find Europe's 'oldest town'</a></h4>
+                                <p class="post-meta">
+                                    <span class="author">Posted by John Doe</span>
+                                    <span class="post-meta-cat">in<a href="#"> Blog</a></span>
+                                </p>
+                            </div>
+                        </div><!-- 1st Latest Post end -->
+
+                        <div class="latest-post-items media">
+                            <div class="latest-post-content media-body">
+                                <h4><a href="#">Few Answers in Case of Murdered Law Professor</a></h4>
+                                <p class="post-meta">
+                                    <span class="date"><i class="icon icon-calendar"></i> Mar 15, 2015</span>
+                                    <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">03</a></span>
+                                </p>
+                            </div>
+                        </div><!-- 2nd Latest Post end -->
+
+                        <div class="latest-post-items media">
+                            <div class="latest-post-content media-body">
+                                <h4><a href="#">Over the year we have lots of experience in our field</a></h4>
+                                <p class="post-meta">
+                                    <span class="date"><i class="icon icon-calendar"></i> Apr 17, 2015</span>
+                                    <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">14</a></span>
+                                </p>
+                            </div>
+                        </div><!-- 3rd Latest Post end -->
+
+                    </div><!--/ End Recent Posts-->
+
+
+
+                    <div class="col-md-4 col-sm-12 footer-widget">
+                        <h3 class="widget-title">Flickr Photos</h3>
+
+                        <div class="img-gallery">
+                            <div class="img-container">
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/1.jpg">
+                                    <img src="/FrontDesign/images/gallery/1.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/2.jpg">
+                                    <img src="/FrontDesign/images/gallery/2.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/3.jpg">
+                                    <img src="/FrontDesign/images/gallery/3.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/4.jpg">
+                                    <img src="/FrontDesign/images/gallery/4.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/5.jpg">
+                                    <img src="/FrontDesign/images/gallery/5.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/6.jpg">
+                                    <img src="/FrontDesign/images/gallery/6.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/6.jpg">
+                                    <img src="/FrontDesign/images/gallery/7.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/6.jpg">
+                                    <img src="/FrontDesign/images/gallery/8.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="/FrontDesign/images/gallery/6.jpg">
+                                    <img src="/FrontDesign/images/gallery/9.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div><!--/ end flickr -->
+
+                    <div class="col-md-3 col-sm-12 footer-widget footer-about-us">
+                        <h3 class="widget-title">About Awizom</h3>
+                        <p>We are a leading IT company. We believe in quality and standard worldwide.</p>
+                        <h4>Address</h4>
+                        <p>
+                            5th Floor, Capital Plaza
+                            Near Fruit Market Deopuri, Raipur (C.G.) 492015
+                        </p></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Email:</h4>
+                                <p>info@awizomtech.com</p>
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Phone No.</h4>
+                                <p>0771-2412821, 2412921</p>
+                            </div>
+                        </div>
+
+                    </div><!--/ end about us -->
+
+
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </footer><!-- Footer end -->
+        <!-- Footer start -->
+        <section id="copyright" class="copyright angle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-social unstyled">
+                            <li>
+                                <a title="Twitter" href="https://twitter.com/AwizomB">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+                                </a>
+                                <a title="Facebook" href="https://www.facebook.com/576897842812519/photos/a.580499922452311/586396508529319/?type=3&theater">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+                                </a>
+                                <a title="Google+" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+                                </a>
+                                <a title="linkedin" href="https://www.linkedin.com/company/awizomtechbytes">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+                                </a>
+
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/ Row end -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright-info">
+                            &copy; Copyright 2019. <span>Designed by <a href="#">Awizom Tech Bytes Pvt. Ltd. Raipur</a></span>
+                        </div>
+                    </div>
+                </div><!--/ Row end -->
+                <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+                    <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+                </div>
+            </div><!--/ Container end -->
+        </section><!--/ Footer end -->
+        <!-- Javascript Files
+
+
+        ================================================== -->
+
+
+        <script>
+
+            function sendemail() {
+                alert();
+                var email = document.getElementById("email").value;
+                var subject = document.getElementById("name").value;
+                var body = document.getElementById("subject").value;
+                var Message = document.getElementById("message").value;
+                document.write('<a href="mailto:' + email + '?subject=' + subject + '&body=' + body + '&message' + Message + '">' + 'Click here to send email as well' + '<' + '/a>');
+            }
+
+        </script>
+
+
+
+
+
+        <!-- Google Map API Key Source -->
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"></script>
+        <!-- Doc https://developers.google.com/maps/documentation/javascript/get-api-key -->
+        <script type="text/javascript" src="js/gmap3.js"></script>
+
+        <script type="text/javascript">
+
+            $(function () {
+                $('#map')
+                    .gmap3({
+                        address: "14600 Goldenwest St #101A, Westminster, California 92683",
+                        zoom: 17,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        scrollwheel: false
+                    })
+                    .marker(function (map) {
+                        return {
+                            position: map.getCenter(),
+                            icon: 'http://themewinter.com/html/marker.png'
+                        };
+                    });
+            });
+
+        </script>
+
+
+        <!-- Template custom -->
+        <script type="text/javascript" src="js/custom.js"></script>
+    </div><!-- Body inner end -->
+
+    <script src="~/FrontDesign/js/bootstrap.min.js"></script>
+    <script src="~/FrontDesign/js/cd-hero.js"></script>
+    <script src="~/FrontDesign/js/custom.js"></script>
+    <script src="~/FrontDesign/js/ini.isotope.js"></script>
+    <script src="~/FrontDesign/js/isotope.js"></script>
+    <script src="~/FrontDesign/js/jquery.flexslider.js"></script>
+    <script src="~/FrontDesign/js/jquery.js"></script>
+    <script src="~/FrontDesign/js/jquery.min.js"></script>
+    <script src="~/FrontDesign/js/jquery.prettyPhoto.js"></script>
+    <script src="~/FrontDesign/js/owl.carousel.js"></script>
+    <script src="~/FrontDesign/js/smoothscroll.js"></script>
+    <script src="~/FrontDesign/js/style-switcher.js"></script>
+    <script src="~/FrontDesign/js/waypoints.min.js"></script>
+    <script src="~/FrontDesign/js/wow.min.js"></script>
+    <script src="~/FrontDesign/js/jquery.easing.1.3.js"></script>
+    <script src="~/FrontDesign/js/jquery.counterup.min.js"></script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>

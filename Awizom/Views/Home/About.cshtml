@@ -1,0 +1,402 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Awizom Tech Bytes Pvt. Ltd.</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="icon" href="/awi.png" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/css/owl.theme.css" rel="stylesheet" />
+    <link href="~/css/flexslider.css" rel="stylesheet" />
+    <link href="~/css/cd-hero.css" rel="stylesheet" />
+    <link href="~/css/presets/preset1.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Style switcher start -->
+    @*<div class="style-switch-wrapper">
+        <div class="style-switch-button">
+            <i class="fa fa-sliders"></i>
+        </div>
+        <h3>Style Options</h3>
+        <button id="preset1" class="btn btn-sm btn-primary"></button>
+        <button id="preset2" class="btn btn-sm btn-primary"></button>
+        <button id="preset3" class="btn btn-sm btn-primary"></button>
+        <button id="preset4" class="btn btn-sm btn-primary"></button>
+        <button id="preset5" class="btn btn-sm btn-primary"></button>
+        <button id="preset6" class="btn btn-sm btn-primary"></button>
+        <br /><br />
+        <a class="btn btn-sm btn-primary close-styler pull-right">Close X</a>
+    </div>*@
+    <!-- Style switcher end -->
+
+    <div class="body-inner">
+        <!-- Header start -->
+        <header id="header" class="navbar-fixed-top header" role="banner">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo start -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand navbar-bg" style="background-color: white;margin-left:3px;margin-top:-3px;">
+                            <a href="@Url.Action("Index", "Home", new { area = "" })">
+                                <img class="img-responsive" src="/FrontDesign/images/awizomlogo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div><!--/ Logo end -->
+                    <nav class="collapse navbar-collapse clearfix" role="navigation">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="@Url.Action("Index", "Home", new { area = "" })">Home</a></li>
+
+                            <li class="active"><a href="@Url.Action("About", "Home", new { area = "" })">About Us</a></li>
+
+
+                            <li><a href="@Url.Action("Services", "Home", new { area = "" })">Services</a></li>
+
+
+                            <li><a href="@Url.Action("Projects", "Home", new { area = "" })">Projects</a></li>
+
+
+                            <li><a href="@Url.Action("Career", "Home", new { area = "" })">Career</a></li>
+
+
+                            <li><a href="@Url.Action("Contact", "Home", new { area = "" })">Contact</a></li>
+
+                            <li><a href="@Url.Action("Appointment", "Home", new { area = "" })">Make Appointment</a></li>
+
+                            <li><a href="@Url.Action("Events", "Home", new { area = "" })">Events</a></li>
+                        </ul>
+                    </nav><!--/ Navigation end -->
+                </div><!--/ Row end -->
+            </div><!--/ Container end -->
+        </header><!--/ Header end -->
+
+        <div id="banner-area">
+            <img src="/FrontDesign/images/banner/banner2.jpg" alt="" />
+            <div class="parallax-overlay"></div>
+            <!-- Subpage title start -->
+            <div class="banner-title-content">
+                <div class="text-center">
+                    <h2>About Us </h2>
+                    <ul class="breadcrumb">
+                        <li><a href="@Url.Action("Index", "Home", new { area = "" })" style="color:white">Home</a></li>
+                        <li><a href="#"> About Us </a></li>
+                    </ul>
+                </div>
+            </div><!-- Subpage title end -->
+        </div><!-- Banner area end -->
+        <!-- Main container start -->
+
+        <section id="main-container">
+            <div class="container">
+
+                <!-- Company Profile -->
+
+                <div class="row">
+                    <div class="col-md-12 heading text-center">
+                        <h2 class="title2">
+                            About Our Company
+                            <span class="title-desc">A Quality Experience Team with  years of experience</span>
+                        </h2>
+                    </div>
+                </div><!-- Title row end -->
+
+                <div class="row about-wrapper-top">
+                    <div class="col-md-6 ts-padding about-message">
+                        <h3>Who We Are</h3>
+                        <p style="text-align:justify">
+                            The company is providing software development both on-site as well as offshore and Management & Maintenance of software.
+                            We have expertise and experience of large projects involving solution architecture, design, development, Implementation, testing and commissioning.
+                            Our organization is professionally managed by highly technical with experience in a cross section of industries with deep understanding of technology and domain knowledge.
+                        </p>
+                        <p style="text-align:justify">
+                            Company is providing best training in the industries for Networking, Network Security, Information Security, Server and Software Development
+                            related certifications with high success rate.
+                        </p>
+
+
+                    </div><!--/ About message end -->
+                    <div class="col-md-6 ts-padding about-img" style="height:374px;background:url(/FrontDesign/images/pages/comp.jpeg) 50% 50% / cover no-repeat;">
+                    </div><!--/ About image end -->
+                </div><!--/ Content row end -->
+
+                <div class="row about-wrapper-bottom">
+                    <div class="col-md-6 ts-padding about-img" style="height: 374px; background: url(/FrontDesign/images/pages/visionour.jpg) 50% 50% / cover no-repeat;">
+                    </div><!--/ About image end -->
+                    <div class="col-md-6 ts-padding about-message">
+                        <h3>OUR VISION</h3>
+                        <p>
+                            Our vision is to be recognized as a leading IT Professional, knowledgeable, ethical and end-to-end Software Development,
+                            Network Infrastructure Development and information security service, Quality products/customized solutions & services through
+                            innovative usage of technology.
+                        </p>
+
+                    </div><!--/ About message end -->
+                </div><!--/ Content row end -->
+
+                <div class="row about-wrapper-top">
+                    <div class="col-md-6 ts-padding about-message">
+                        <h3>OUR MISSION</h3>
+                        <p style="text-align:justify">
+                            We aspire to be a company with best IT Professional of the industry, following well-established processes and procedures
+                            to deliver world class products & services, on committed time period.
+                        </p>
+                        <p style="text-align:justify">
+                            Company is providing best training in the industries for Networking, Network Security, Information Security, Server and Software Development
+                            related certifications with high success rate.
+                        </p>
+                    </div><!--/ About message end -->
+                    <div class="col-md-6 ts-padding about-img" style="height: 374px; background: url(/FrontDesign/images/pages/aboutus1.png) 50% 50% / cover no-repeat;">
+                    </div><!--/ About image end -->
+                </div><!--/ Content row end -->
+
+                <div class="row about-wrapper-bottom">
+                    <div class="col-md-6 ts-padding about-img" style="height: 374px; background: url(/FrontDesign/images/pages/valueour.jpg) 50% 50% / cover no-repeat;">
+                    </div><!--/ About image end -->
+                    <div class="col-md-6 ts-padding about-message">
+                        <h3 style="margin-top:-15px;">OUR VALUE</h3>
+                        <p style="text-align:justify">A passion for excellence is the key driver to our success. We strive to exceed the expectations of our clients.</p>
+                        <ul class="unstyled arrow" style="text-align:justify">
+                            <li>Customers First – Always with trust and complete satisfaction.</li>
+                            <li>Innovation – Innovate across the whole IT World.</li>
+                            <li>Collaboration – Maximizing relationships so collective efforts surpass those of the individual.</li>
+                            <li>Excellence – Setting goal and achieving high standards in the IT Solutions.</li>
+                            <li>Integrity – Managing the highest ethical and professional standards.</li>
+                        </ul>
+                    </div><!--/ About message end -->
+                </div><!--/ Content row end -->
+                <!-- Company Profile -->
+
+            </div><!--/ 1st container end -->
+
+
+            <div class="gap-60"></div>
+
+
+
+
+            <div class="gap-60"></div>
+
+
+            <div class="container">
+                <!-- 2nd container start -->
+                <!-- Team start -->
+                <div class="team">
+
+                    <div class="row">
+                        <div class="col-md-12 heading text-center">
+                            <h2 class="title2">
+                                Meet With Our Team
+                                <span class="title-desc">A Quality Experience Team with years of experience</span>
+                            </h2>
+                        </div>
+                    </div><!-- Title row end -->
+
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team wow slideInLeft">
+                                <div class="img-hexagon">
+                                    <img src="/FrontDesign/images/team/dummy.png" alt="">
+                                    <span class="img-top"></span>
+                                    <span class="img-bottom"></span>
+                                </div>
+                                <div class="team-content">
+                                    <h3>Vosgi Varduhi</h3>
+                                    <p>Web Designer</p>
+                                    <div class="team-social">
+                                        <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+
+                                        <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/ Team 1 end -->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team wow slideInLeft">
+                                <div class="img-hexagon">
+                                    <img src="/FrontDesign/images/team/dummy.png" alt="">
+                                    <span class="img-top"></span>
+                                    <span class="img-bottom"></span>
+                                </div>
+                                <div class="team-content">
+                                    <h3>Robert Aleska</h3>
+                                    <p>Web Designer</p>
+                                    <div class="team-social">
+                                        <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+
+                                        <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/ Team 2 end -->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team wow slideInRight">
+                                <div class="img-hexagon">
+                                    <img src="/FrontDesign/images/team/dummy.png" alt="">
+                                    <span class="img-top"></span>
+                                    <span class="img-bottom"></span>
+                                </div>
+                                <div class="team-content">
+                                    <h3>Taline Voski</h3>
+                                    <p>Web Designer</p>
+                                    <div class="team-social">
+                                        <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+
+                                        <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/ Team 3 end -->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team animate wow slideInRight">
+                                <div class="img-hexagon">
+                                    <img src="/FrontDesign/images/team/dummy.png" alt="">
+                                    <span class="img-top"></span>
+                                    <span class="img-bottom"></span>
+                                </div>
+                                <div class="team-content">
+                                    <h3>Alban Spencer</h3>
+                                    <p>Web Designer</p>
+                                    <div class="team-social">
+                                        <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+
+                                        <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/ Team 4 end -->
+
+
+                    </div><!--/ Content row end -->
+
+                </div><!-- Team end -->
+
+            </div><!-- 2nd container end -->
+        </section><!--/ Main container end -->
+
+
+
+        <div class="gap-40"></div>
+
+        <!-- Footer start -->
+
+        <section id="footer" class="footer footer-map">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="footer-logo">
+                            <img src="/FrontDesign/images/awizomlogo.png" alt="logo">
+                        </div>
+                        <div class="gap-20"></div>
+                        <ul class="dark unstyled">
+                            <li>
+                                <a title="Twitter" href="https://twitter.com/AwizomB">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+                                </a>
+                                <a title="Facebook" href="https://www.facebook.com/576897842812519/photos/a.580499922452311/586396508529319/?type=3&theater">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+                                </a>
+                                <a title="Google+" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+                                </a>
+                                <a title="linkedin" href="https://www.linkedin.com/company/awizomtechbytes">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+                                </a>
+                                <!-- <!-- <a title="Pinterest" href="#"> -->
+                                <!-- <!-- <span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span> -->
+                                <!-- <!-- </a> -->
+                                <!-- <!-- <a title="Skype" href="#"> -->
+                                <!-- <!-- <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span> -->
+                                <!-- <!-- </a> -->
+                                <!-- <!-- <a title="Dribble" href="#"> -->
+                                <!-- <!-- <span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span> -->
+                                <!-- <!-- </a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/ Row end -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright-info">
+                            &copy; Copyright 2019. <span>Designed by <a href="#">Awizom Tech Bytes Pvt. Ltd. Raipur</a></span>
+                        </div>
+                    </div>
+                </div><!--/ Row end -->
+                <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+                    <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+                </div>
+            </div><!--/ Container end -->
+        </section>
+    
+    <!--/ Footer end -->
+
+
+
+
+        <!-- Javascript Files
+        ================================================== -->
+        <script src="~/FrontDesign/js/bootstrap.min.js"></script>
+        <script src="~/FrontDesign/js/cd-hero.js"></script>
+        <script src="~/FrontDesign/js/custom.js"></script>
+        <script src="~/FrontDesign/js/ini.isotope.js"></script>
+        <script src="~/FrontDesign/js/isotope.js"></script>
+        <script src="~/FrontDesign/js/jquery.flexslider.js"></script>
+        <script src="~/FrontDesign/js/jquery.js"></script>
+
+        <script src="~/FrontDesign/js/jquery.prettyPhoto.js"></script>
+        <script src="~/FrontDesign/js/owl.carousel.js"></script>
+        <script src="~/FrontDesign/js/smoothscroll.js"></script>
+        <script src="~/FrontDesign/js/style-switcher.js"></script>
+        <script src="~/FrontDesign/js/waypoints.min.js"></script>
+        <script src="~/FrontDesign/js/wow.min.js"></script>
+        <script src="~/FrontDesign/js/jquery.easing.1.3.js"></script>
+        <script src="~/FrontDesign/js/jquery.counterup.min.js"></script>
+    </div><!-- Body inner end -->
+</body>
+</html>
